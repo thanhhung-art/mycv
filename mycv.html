@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <title>Thanh hung's resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <main>
+        <header>
+          <h1>Nguyễn Thanh Hùng</h1>
+          <img src="" alt="profile image" />
+        </header>
+        <div class="body">
+          <div class="column1">
+            <section class="block1">
+              <h2>Contact Infomation</h2>
+              <ul>
+                <li>
+                  <h4>Email:</h4>
+                  <p>thanhhungdeveloper@gmail.com</p>
+                </li>
+                <li>
+                  <h4>Date of birth:</h4>
+                  <p>14/3/2000</p>
+                </li>
+                <li>
+                  <h4>Gender:</h4>
+                  <p>male</p>
+                </li>
+                <li>
+                  <h4>Address:</h4>
+                  <p>Binh thuan</p>
+                </li>
+                <li>
+                  <h4>Link github:</h4>
+                  <p>thanh hung art</p>
+                </li>
+              </ul>
+            </section>
+            <section class="block2">
+              <h2>Objective Career & Introdution</h2>
+              <p>
+                I'm a self-taught and hard-working developer, i want to be an
+                employee of your business. At the same time, I want to learn
+                more from your professional working environment.
+              </p>
+            </section>
+            <section class="block3">
+              <h2>Skills</h2>
+              <ul>
+                <li><p>HTML</p></li>
+                <li><p>Css</p></li>
+                <li><p>Git</p></li>
+                <li><p>Github</p></li>
+                <li><p>JavaScript</p></li>
+                <li><p>TypeScript</p></li>
+                <li><p>Reactjs</p></li>
+                <li><p>Nextjs</p></li>
+                <li><p>Nodejs</p></li>
+                <li><p>Mongodb</p></li>
+              </ul>
+            </section>
+            <section class="block5">
+              <h2>Interests</h2>
+              <h3>Programing languages:</h3>
+              <ul>
+                <li><p>C#</p></li>
+                <li><p>Flutter</p></li>
+                <li><p>Python</p></li>
+                <li><p>Golang</p></li>
+              </ul>
+              <h3>Technology:</h3>
+              <ul>
+                <li><p>Blockchain</p></li>
+                <li><p>Web3</p></li>
+              </ul>
+            </section>
+          </div>
+          <div class="column2">
+            <section class="block4">
+              <h2>Projects</h2>
+              <ul class="container-projects"></ul>
+            </section>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+  <script>
+    const projects = [
+      {
+        name: "Shop laptop client",
+        link: "https://shop-laptop.vercel.app",
+        github: "https://github.com/thanhhung-art/shop-laptop",
+        description:
+          "A web application for selling laptop, I builded by Nextjs.",
+        teamSize: "1 people",
+        myResponsibilities: "Design, develope and deploy",
+        features:
+          "Infinite loading, buy laptop, sign in, sign up, review laptop, cart, edit user infomation,...",
+        technologies: "Nextjs, Material ui, TypeScript, React-query, Redux-toolkit, jwt",
+      },
+      {
+        name: "Shop laptop admin dashboard",
+        link: "https://shop-laptop-admin.vercel.app",
+        github: "https://github.com/thanhhung-art/shop-laptop-admin",
+        description: "A dashboard I builded to manage shop laptop",
+        teamSize: "1 people",
+        myResponsibilities: "develope and deploy",
+        features:
+          "Infinite loop, add/update/delete products/users, sign in, sign out, watch status website.",
+        technologies: "Nextjs, Material ui, React-query, jwt",
+      },
+      {
+        name: "Shop laptop server",
+        link: "https://github.com/thanhhung-art/shop-laptop-server",
+        github: "https://github.com/thanhhung-art/shop-laptop-server",
+        description: "server for shop laptop and dashboard admin",
+        teamSize: "1 people",
+        myResponsibilities: "develope and deploy",
+        features: "CRUD action",
+        technologies: "Nodejs, mongodb, mongoose, express, jwt",
+      },
+      {
+        name: "Netflix clone",
+        link: "https://netflix-clone-b9303.web.app/",
+        github: "https://github.com/thanhhung-art/netflix-clone",
+        description: "A clone of netflix",
+        teamSize: "1 people",
+        myResponsibilities: "design, develope and deploy",
+        features: "show movie, responsive, watch trailer",
+        technologies: "Reactjs, TypeScript",
+      },
+      {
+        name: "Recipes website",
+        link: "https://recipes-meal.vercel.app/",
+        github: "https://github.com/thanhhung-art/recipes-meal",
+        description: "A website for recipes meal",
+        teamSize: "1 people",
+        myResponsibilities: "design, develope and deploy",
+        features: "show recipes, responsive, search recipes",
+        technologies: "Reactjs",
+      },
+      {
+        name: "React weather website",
+        link: "https://weather-website-firebase-react.web.app/",
+        github: "https://github.com/thanhhung-art/react-weather-website",
+        description: "A weather website",
+        teamSize: "1 people",
+        myResponsibilities: "design, develope and deploy",
+        features: "show weather, responsive",
+        technologies: "Reactjs",
+      }
+    ];
+    const ul = document.querySelector(".container-projects");
+    const hr = document.createElement("hr");
+
+    projects.forEach((project) => {
+      const li = document.createElement("li");
+      const h3 = document.createElement("h3");
+      const p = document.createElement("p");
+      const wrapperLinks = document.createElement("div");
+      const a = document.createElement("a");
+      const h4 = document.createElement("h4");
+      const table = document.createElement("table");
+      const tr = document.createElement("tr");
+      const td = document.createElement("td");
+      const button = document.createElement("button");
+
+      h3.innerHTML = project.name;
+      a.href = project.link;
+      a.target = "_blank";
+
+      wrapperLinks.classList.add("wrapper-links");
+      wrapperLinks.innerHTML = `
+        <a href="${project.link}" target="_blank">
+          <button class="link-button">view demo</button>
+        </a>
+        <a href="${project.github}" target="_blank">
+          <button class="link-button">link github</button>
+        </a>
+      `;
+
+      table.innerHTML = `
+        <tr>
+          <td><h4>Description</h4></td>
+          <td><p>${project.description}</p></td>
+        </tr>
+        <tr>
+          <td><h4>Team size</h4></td>
+          <td><p>${project.teamSize}</p></td>
+        </tr>
+        <tr>
+          <td><h4>My responsibilities</h4></td>
+          <td><p>${project.myResponsibilities}</p></td>
+        </tr>
+        <tr>
+          <td><h4>Features</h4></td>
+          <td><p>${project.features}</p></td>
+        </tr>
+        <tr>
+          <td><h4>Technologies</h4></td>
+          <td><p>${project.technologies}</p></td>
+        </tr>
+      `;
+
+      li.appendChild(h3);
+      li.appendChild(wrapperLinks);
+      li.appendChild(table);
+      ul.appendChild(li);
+    });
+  </script>
+</html>

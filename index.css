@@ -1,0 +1,166 @@
+:root {
+  --color-primary: #4699e5;
+  --color-secondary: #001219;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background: #fffcf7;
+}
+
+main {
+  max-width: 1100px;
+  border: 1px solid #ccc;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: #faf9f9;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-primary);
+  padding: 3rem;
+}
+
+a {
+  text-decoration: none;
+  color: #001219;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #fff;
+}
+
+h2 {
+  padding-bottom: 3px;
+  color: var(--color-primary);  
+}
+
+h4,
+p {
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  margin-bottom: 0.2rem;
+}
+
+li h4 {
+  display: inline-block;
+  min-width: 100px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table td {
+  border: 1px solid #333;
+  padding: 0.2rem;
+}
+
+table td p {
+  max-width: 350px;
+}
+
+hr {
+  margin: 1rem 0;
+}
+
+.block1 li p {
+  margin-left: 0.5rem;
+  font-size: 0.9rem;
+  display: inline-block;
+}
+
+.block4 ul li p {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.block4 h2 {
+  margin-bottom: .5rem;
+}
+
+.block5 h3 {
+  font-size: 1rem;
+}
+
+.body {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: 0 2rem;
+}
+
+.link-button {
+  padding: 0.5rem;
+  border-radius: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+  background-color: var(--color-primary);
+  outline: none;
+  border: none;
+}
+
+.column1 {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.block4 ul li {
+  margin-bottom: 1rem;
+}
+
+.wrapper-links {
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 0;
+  gap: .5rem;
+}
+
+
+@media screen and (max-width: 768px) {
+  header {
+    padding: 1rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: .8rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+    max-width: 170px;
+  }
+
+  .body {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+}
