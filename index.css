@@ -89,7 +89,12 @@ hr {
 }
 
 .block4 ul li p {
-  font-size: 14px;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.block4 ul li h4 {
+  font-size: 12px;
   font-weight: 300;
 }
 
@@ -99,6 +104,22 @@ hr {
 
 .block5 h3 {
   font-size: 1rem;
+}
+
+.block5 h3 {
+  margin-bottom: .3rem;
+}
+
+.block5 ul {
+  margin-top: .4rem;
+}
+
+.block6 h3 {
+  font-size: 1rem;
+}
+
+.block6 ul {
+  margin-top: .4rem;
 }
 
 .body {
