@@ -52,6 +52,7 @@ p {
   font-size: 0.9rem;
   font-weight: 300;
   font-family: "Roboto", sans-serif;
+  color: rgba(0,0,0,0.7);
 }
 
 ul {
@@ -91,7 +92,7 @@ hr {
 }
 
 .block4 ul li p {
-  font-size: 12px;
+  font-size: .8rem;
   font-weight: 300;
 }
 
