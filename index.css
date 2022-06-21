@@ -34,7 +34,7 @@ header {
 
 a {
   text-decoration: none;
-  color: #001219;
+  color: var(--color-secondary);
 }
 
 h1 {
@@ -57,7 +57,7 @@ p {
   font-size: 0.9rem;
   font-weight: 300;
   font-family: "Roboto", sans-serif;
-  color: rgba(0,0,0,0.7);
+  color: rgba(0,0,0,0.9);
 }
 
 ul {
